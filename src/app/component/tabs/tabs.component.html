@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <ul class="nav nav-pills ">
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link" [ngClass]="{
+                active:selectFrameWork.toLowerCase().includes('html')
+            }" (click)="onclickTab('Html')">Html</a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link " [ngClass]="{
+                active:selectFrameWork.toLowerCase().includes('css')
+            }" (click)="onclickTab('Css')">Css</a>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link" [ngClass]="{
+                active:selectFrameWork.toLowerCase().includes('javascript')
+            }" (click)="onclickTab('Javascript')">Javascript</a>
+        </li>
+    </ul>
+    <hr>
+    <div class="tabCard">
+        <div class="card " *ngIf="selectFrameWork.toLowerCase().includes('html')">
+            <div class="card-body bg-warning">
+                <strong>(Html)</strong>HyperText Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as
+                Cascading Style Sheets and scripting languages such as JavaScript.
+            </div>
+        </div>
+        <div class="card " *ngIf="selectFrameWork.toLowerCase().includes('css')">
+            <div class="card-body bg-success">
+                <strong>Css</strong>(Cascading Style Sheets) is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to HTML documents. It describes how a webpage should look. It prescribes
+                colors, fonts, spacing, etc
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body bg-info" *ngIf="selectFrameWork.toLowerCase().includes('javascript')">
+                <strong>Javascript</strong> is a programming language used for creating dynamic content on websites. It is a lightweight, cross-platform and single-threaded programming language. JavaScript is an interpreted language that executes code
+                line by line providing more flexibility. It is a commonly used programming language to create dynamic and interactive elements in web applications
+            </div>
+        </div>
+    </div>
+</div>
