@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit {
-selectFrameWork:string='Html'
+selectFrameWork:string='html'
   constructor() { }
   onclickTab(val:string){
     this.selectFrameWork=val
@@ -15,3 +15,5 @@ selectFrameWork:string='Html'
   }
 
 }
+
+
