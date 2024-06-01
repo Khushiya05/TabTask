@@ -7,12 +7,14 @@ import { TabsComponent } from './component/tabs/tabs.component';
 
 import { RefacortabComponent } from './component/refacortab/refacortab.component';
 import { CommonModule } from '@angular/common';
+import { SwitchtaskComponent } from './component/switchtask/switchtask.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
-    RefacortabComponent
+    RefacortabComponent,
+    SwitchtaskComponent
   ],
   imports: [
     BrowserModule,

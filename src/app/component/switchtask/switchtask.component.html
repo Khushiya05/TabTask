@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h3 class="text-center bg-info text-white p-4 m-2">Tab-Task using NgSwitch</h3>
+    <ul class="nav nav-pills ">
+        <li class="nav-item m-1" *ngFor="let hero of imgArr" (click)="selectedHero=hero.name">
+            <a href="javascript:;" class="nav-link" [ngClass]="{
+                'active':selectedHero.includes(hero.name)
+            }">{{hero.name}}</a>
+        </li>
+    </ul>
+    <div class="tab-body" [ngSwitch]="selectedHero">
+        <ng-container *ngFor="let hero of imgArr">
+            <div class="card " *ngSwitchCase="hero.name">
+                <div class="card-body">
+                    <img [src]="hero.imgUrl" alt="{{ hero.name }}" class="img-fluid">
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <hr>
+
+</div>
