@@ -8,13 +8,15 @@ import { TabsComponent } from './component/tabs/tabs.component';
 import { RefacortabComponent } from './component/refacortab/refacortab.component';
 import { CommonModule } from '@angular/common';
 import { SwitchtaskComponent } from './component/switchtask/switchtask.component';
+import { TableviewchildComponent } from './component/tableviewchild/tableviewchild.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
     RefacortabComponent,
-    SwitchtaskComponent
+    SwitchtaskComponent,
+    TableviewchildComponent
   ],
   imports: [
     BrowserModule,

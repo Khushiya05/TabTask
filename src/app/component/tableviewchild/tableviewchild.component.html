@@ -1,0 +1,49 @@
+<div class="container">
+    <h3 class="text-center text-white bg-info p-4 m-2">Student Task</h3>
+    <div class="row">
+        <div class="col-md-6 mt-4">
+            <div class="form-group">
+                <label for="fname">First Name :</label>
+                <input type="text" #fname id="fname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" #lname id="lname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" #email id="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="fname">Contact:</label>
+                <input type="text" #contact id="contact" class="form-control">
+            </div>
+            <button class="btn btn-outline-info btn-sm btn-block" (click)="onstdAdd()">Add Student</button>
+        </div>
+        <div class="col-md-6 mt-4 table-responsive">
+            <table class="table table-bordered" *ngIf="stdSArr.length>0; else noStd">
+                <thead class="bg-warning">
+                    <th>Sr.No</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                </thead>
+                <tbody class="bg-success">
+                    <tr *ngFor="let std of stdSArr;index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{std.fname}}</td>
+                        <td>{{std.lname}}</td>
+                        <td>{{std.email}}</td>
+                        <td>{{std.contact}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ng-template #noStd>
+                <span class="alert alert-info">
+                    No student information is Available
+                </span>
+            </ng-template>
+        </div>
+    </div>
+</div>
