@@ -15,9 +15,9 @@ export class TableviewchildComponent implements OnInit {
   }
 stdSArr=[
   {
-  fname:"Khushi",
-  lname:"Patil",
-  email:"Khushi@gmail.com",
+  fname:"Mac",
+  lname:"Deo",
+  email:"mac@gmail.com",
   contact:"8456723456"
 }
 ]
